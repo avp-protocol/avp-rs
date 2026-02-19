@@ -1,0 +1,29 @@
+[package]
+name = "avp"
+version = "0.1.0"
+edition = "2021"
+description = "Agent Vault Protocol - Rust SDK"
+license = "Apache-2.0"
+repository = "https://github.com/avp-protocol/avp-rs"
+homepage = "https://avp-protocol.github.io/website"
+documentation = "https://docs.rs/avp"
+keywords = ["avp", "vault", "credentials", "secrets", "ai-agents"]
+categories = ["authentication", "cryptography"]
+
+[dependencies]
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+rand = "0.8"
+aes-gcm = "0.10"
+base64 = "0.21"
+sha2 = "0.10"
+pbkdf2 = "0.12"
+
+[dev-dependencies]
+tempfile = "3.0"
+
+[lib]
+name = "avp"
+path = "src/lib.rs"
